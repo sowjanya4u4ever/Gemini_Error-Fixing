@@ -62,6 +62,7 @@
     .form label {
       display: block;
       margin-bottom: 5px;
+      color: #222222; /* Modified text color for better contrast */
     }
     .form input,
     .form textarea {
@@ -70,6 +71,11 @@
       border: 1px solid #ccc;
       border-radius: 3px;
       margin-bottom: 15px;
+    }
+    .form input[required]::after { /* Target required indicator after input */
+      content: '*';
+      color: #f00; /* Modified required indicator color for better contrast */
+      margin-left: 5px;
     }
     .form button {
       background-color: #32CD32;
@@ -106,11 +112,4 @@
     <div class="doctor">
       <h3>Diana Joseph</h3>
       <p>Orthodontist with expertise in creating beautiful and healthy smiles. 
-        Diana utilizes cutting-edge technology to provide a variety of orthodontic treatment options for children and adults.</p>
-    </div>
-    <div class="form-container">
-      <h2>Contact Us</h2>
-      <form class="form" action="/submit-form" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
+        Diana utilizes cutting-edge technology to provide a variety of orthodontic treatment options for children and adults.</p
